@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Space Mono', monospace;
+	--shadow: rgba(0, 0, 0, 0.05) 0px 6px 10px 0px,
+		rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+	--color: #166e67;
+	--gap: 0.5rem;
+	--radius: 5px;
+}
+
+html,
+body {
+	min-height: 100vh;
+	margin: 0 auto;
+
+	font-size: 16px;
+}
+button {
+	background-color: rgba(178, 34, 34, 0);
+	border: none;
+}
+button:hover {
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+}
+a,
+button {
+	color: aliceblue;
+	font-size: 1rem;
+}
+h2 {
+	border: 1px solid purple;
+	padding: 0.4rem 0.8rem;
+}
+nav {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	background-color: palevioletred;
+	padding: 1rem 2rem;
+	align-items: center;
+}
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border: none;
+	column-gap: var(--gap);
+	padding: 0.6rem;
+	position: relative;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.bx {
+	font-size: 1.1rem;
+}
+.dropdown {
+	position: absolute;
+	width: 250px;
+	box-shadow: var(--shadow);
+	border-radius: var(--radius);
+	margin-top: 0.3rem;
+	background: white;
+	transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+
+	transform: translateY(0.5rem);
+	visibility: hidden;
+	opacity: 0;
+}
+
+.dropdown a {
+	display: flex;
+	align-items: center;
+	column-gap: var(--gap);
+	padding: 0.8rem 1rem;
+	text-decoration: none;
+	color: black;
+}
+
+.dropdown a:hover {
+	background-color: var(--color);
+	color: white;
+}
+
+.show {
+	transform: translateY(0rem);
+	visibility: visible;
+	opacity: 1;
+}
+
+.arrow {
+	transform: rotate(180deg);
+	transition: 0.2s ease;
+}
